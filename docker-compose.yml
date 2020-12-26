@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ida-server:
+    build: .
+    ports: 
+      - "16422:22"
+      - "16446:23946"
+    container_name: idax64
+    dns:
+      - 223.5.5.5
+      - 223.6.6.6
+    volumes: 
+      - ./tmp:/server/tmp
